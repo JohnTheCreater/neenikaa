@@ -1,6 +1,7 @@
 const express=require('express');
 const route=require('./route');
-const cors=require('cors')
+const cors=require('cors');
+const { prototype } = require('module');
 
 const app=express();
 app.use(express.json());
@@ -10,7 +11,7 @@ app.use('/api',route);
 
 const port=process.env.PORT;
 app.listen(port,()=>{
-    console.log('server is running on port 2020')
+    console.log('server is running on port ',port)
 })
 
 
