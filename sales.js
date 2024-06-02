@@ -46,12 +46,16 @@ const insertSales = async (req, res) => {
 
 //getsales
 const getSales = async (req, res) => {
-  const { date, shop } = await req.body;
+  const { date, shop,startDate,endDate } = await req.body;
   const dateIST = dayjs(date).format("YYYY-MM-DD hh:mm:ss");
   let sql_query = "";
   if (date)
     sql_query = `select * from sales where date='${dateIST}' and shop='${shop}'`;
-  else sql_query = `select * from sales where shop='${shop}'`;
+  else sql_query = `select * from sales where shop='${shop} where date between '${dayjs(
+    endDate
+  ).format("YYYY-MM-DD hh:mm:ss")}' AND '${dayjs(startDate).format(
+    "YYYY-MM-DD hh:mm:ss"
+  )}'`;
 
   let priceList = [];
   await db.query(sql_query, async (err, result) => {
