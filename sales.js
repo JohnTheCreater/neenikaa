@@ -52,11 +52,9 @@ const getSales = async (req, res) => {
   if (date)
     sql_query = `select * from sales where date='${dateIST}' and shop='${shop}'`;
   else
-    sql_query = `select * from sales where shop='${shop}' where date between '${dayjs(
-      endDate
-    ).format("YYYY-MM-DD hh:mm:ss")}' AND '${dayjs(startDate).format(
-      "YYYY-MM-DD hh:mm:ss"
-    )}'`;
+    sql_query = `select * from sales where shop='${shop}' and date between '${dayjs(endDate).format("YYYY-MM-DD hh:mm:ss")}'
+     AND 
+     '${dayjs(startDate).format("YYYY-MM-DD hh:mm:ss")}'`;
 
   let priceList = [];
   await db.query(sql_query, async (err, result) => {
