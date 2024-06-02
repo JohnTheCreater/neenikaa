@@ -8,8 +8,8 @@ app.use(cors())
 
 app.use('/api',route);
 
-
-app.listen(2020,()=>{
+const port=process.env.PORT;
+app.listen(port,()=>{
     console.log('server is running on port 2020')
 })
 
