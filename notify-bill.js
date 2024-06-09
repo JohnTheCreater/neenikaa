@@ -279,7 +279,7 @@ const logoSrc = `data:image/png;base64,${logoData}`;
       </div>
         </div>
         `)
-        await page.addStyleTag({ path: './public/style.css' });
+        await page.addStyleTag({ path: './style.css' });
         await page.pdf({ path: "bill.pdf", format: "A4" });
         await browser.close();
         const sender = nodemailer.createTransport({
