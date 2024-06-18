@@ -1,27 +1,27 @@
-[debug] [2024-06-09T14:42:18.167Z] : 
-[debug] [2024-06-09T14:42:18.169Z] : ----------------------------------------------------------------------
-[debug] [2024-06-09T14:42:18.169Z] : Command:      /home/john/.nvm/versions/node/v21.5.0/bin/node /home/john/.nvm/versions/node/v21.5.0/bin/catalyst serve
-[debug] [2024-06-09T14:42:18.170Z] : CLI Version:  1.17.5
-[debug] [2024-06-09T14:42:18.170Z] : Platform:     linux
-[debug] [2024-06-09T14:42:18.170Z] : Node Version: v21.5.0
-[debug] [2024-06-09T14:42:18.170Z] : Time:         Sun Jun 09 2024 20:12:18 GMT+0530 (India Standard Time)
-[debug] [2024-06-09T14:42:18.170Z] : ----------------------------------------------------------------------
-[debug] [2024-06-09T14:42:18.170Z] : 
-[debug] [2024-06-09T14:42:21.620Z] : > authorizing via signed-in user option
-[debug] [2024-06-09T14:42:21.621Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute"]
-[debug] [2024-06-09T14:42:21.680Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/4984000000007001 
+[debug] [2024-06-12T17:24:13.529Z] : 
+[debug] [2024-06-12T17:24:13.531Z] : ----------------------------------------------------------------------
+[debug] [2024-06-12T17:24:13.531Z] : Command:      /home/john/.nvm/versions/node/v21.5.0/bin/node /home/john/.nvm/versions/node/v21.5.0/bin/catalyst serve
+[debug] [2024-06-12T17:24:13.531Z] : CLI Version:  1.17.5
+[debug] [2024-06-12T17:24:13.532Z] : Platform:     linux
+[debug] [2024-06-12T17:24:13.532Z] : Node Version: v21.5.0
+[debug] [2024-06-12T17:24:13.532Z] : Time:         Wed Jun 12 2024 22:54:13 GMT+0530 (India Standard Time)
+[debug] [2024-06-12T17:24:13.532Z] : ----------------------------------------------------------------------
+[debug] [2024-06-12T17:24:13.532Z] : 
+[debug] [2024-06-12T17:24:14.022Z] : > authorizing via signed-in user option
+[debug] [2024-06-12T17:24:14.022Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute"]
+[debug] [2024-06-12T17:24:14.034Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/4984000000007001 
 
-[debug] [2024-06-09T14:42:22.554Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 09 Jun 2024 14:42:22 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/","ZD_CSRF_TOKEN=a561196f-15b7-45d4-bbda-c78bd6a472d1;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=a561196f-15b7-45d4-bbda-c78bd6a472d1;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+[debug] [2024-06-12T17:24:14.761Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 17:24:14 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/","ZD_CSRF_TOKEN=f11d5d82-74b2-484a-bc2f-5690909a3976;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=f11d5d82-74b2-484a-bc2f-5690909a3976;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
 
-[debug] [2024-06-09T14:42:22.577Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/4984000000007001/environment 
+[debug] [2024-06-12T17:24:14.772Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/4984000000007001/environment 
 
-[debug] [2024-06-09T14:42:22.846Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Sun, 09 Jun 2024 14:42:22 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/","ZD_CSRF_TOKEN=f422d136-ffa5-41ef-9a77-fa66f98e1b9b;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=f422d136-ffa5-41ef-9a77-fa66f98e1b9b;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+[debug] [2024-06-12T17:24:15.016Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 17:24:14 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/","ZD_CSRF_TOKEN=ff3e4660-88b8-4668-a733-781283e37067;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ff3e4660-88b8-4668-a733-781283e37067;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
 
-[debug] [2024-06-09T14:42:23.662Z] : http port : '3000' is not available. Hence port '3001' will be used instead.
-[debug] [2024-06-09T14:42:23.665Z] : No basic functions to add
-[info] [2024-06-09T14:42:23.838Z] : 
-[info] [2024-06-09T14:42:23.839Z] :  >>>>>>>>>>>>>> AppSail <<<<<<<<<<<<<< 
-[info] [2024-06-09T14:42:23.840Z] : ℹ neeniAppsail: http://localhost:3001
-[info] [2024-06-09T14:42:23.840Z] : 
+[debug] [2024-06-12T17:24:28.519Z] : http port : '3000' is not available. Hence port '3001' will be used instead.
+[debug] [2024-06-12T17:24:28.521Z] : No basic functions to add
+[info] [2024-06-12T17:24:29.212Z] : 
+[info] [2024-06-12T17:24:29.212Z] :  >>>>>>>>>>>>>> AppSail <<<<<<<<<<<<<< 
+[info] [2024-06-12T17:24:29.213Z] : ℹ neeniAppsail: http://localhost:3001
+[info] [2024-06-12T17:24:29.213Z] : 

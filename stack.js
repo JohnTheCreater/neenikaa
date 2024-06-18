@@ -1,9 +1,12 @@
 const db = require("./db");
 const dayjs = require("dayjs");
+
+
 const getStack = async (req, res) => {
   await db.query("select * from stack", (err, result) => {
     if (err) throw err;
     res.send(result);
+    console.log("res")
   });
 };
 
@@ -28,6 +31,7 @@ const setProductUpdate = async (req, res) => {
     try {
       for (const product of oilAndCake) {
         const { quantity, oil_name, selectedType } = product;
+        console.log(quantity, oil_name, selectedType );
         const sql_query = `
                     UPDATE stack_madurai 
                     SET oil_quantity = oil_quantity + ? 

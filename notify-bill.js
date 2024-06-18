@@ -149,6 +149,7 @@ const sendBill = async (req, res) => {
 
         // })
         let total=0;
+        let totalQuantity=0;
         const logoPath = '/home/john/app/react_app/back-end/logo.png';
         const logoData = fs.readFileSync(logoPath).toString('base64');
 const logoSrc = `data:image/png;base64,${logoData}`;
@@ -218,6 +219,7 @@ const logoSrc = `data:image/png;base64,${logoData}`;
             result.map(item=>{
               const productPrice=priceList.find(it=>it.product_id==item.product_id && it.volume_id==item.volume_id).price
               total+=productPrice*item.quantity
+              totalQuantity+=item.quantity
               return`<tr>
                 <td>${products[item.product_id-1]}
                 ${volumes[item.volume_id-1]}</td>
@@ -232,7 +234,9 @@ const logoSrc = `data:image/png;base64,${logoData}`;
           </tbody>
           <tfoot>
             <tr>
-              <td class="k" colspan="3">Total</td>
+            <td class="k"></td>
+              <td class="k" >Total</td>
+              <td class="total">${totalQuantity}</td>
               <td class="total">${total}</td>
             </tr>
           </tfoot>
@@ -247,7 +251,7 @@ const logoSrc = `data:image/png;base64,${logoData}`;
             </div>
             <div class="row">
               <span class="bold">Taxable(Rs)</span>
-              <p class="taxable">${(total-(Math.round(((total/105)*5)/2*100)/100).toFixed(2))}</p>
+              <p class="taxable">${(total-((Math.round(((total/105)*5)/2*100)/100).toFixed(2))*2)}</p>
             </div>
             <div class="row">
               <span class="bold">CGST</span>
@@ -264,7 +268,7 @@ const logoSrc = `data:image/png;base64,${logoData}`;
           <div class="ban">
             <p><span class="bold">Email:</span>neenikaa2020@gmail.com</p>
             <p><span class="bold">Mobile:</span>824899595</p>
-            <p><span class="bold">Bank Name:</span>Tamilnad Mercantile Bank</p>
+            <p><span class="bold">Bank Name:</span>Tamilnadu Mercantile Bank</p>
             <p><span class="bold">Bank A/c No:</span>435531111111</p>
             <p><span class="bold">IFSC:</span> TMBL000435</p>
             <p><span class="bold">Branch:</span>Sivakasi</p>
