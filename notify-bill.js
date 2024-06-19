@@ -2,8 +2,9 @@ const db = require("./db");
 const nodemailer = require("nodemailer");
 const dayjs = require("dayjs");
 const puppeteer = require("puppeteer");
-const path = require('path');
-const fs = require('fs');
+const path = require("path");
+const fs = require("fs");
+require("dotenv").config();
 
 const send_notification = async (req, res) => {
   const { user_id } = req.body;
@@ -120,40 +121,55 @@ const send_notification = async (req, res) => {
 
 const sendBill = async (req, res) => {
   const { userId, date } = req.body;
-  const products=["sesame","groundnut","coconut"]
-  const volumes=["1 ltr","1/2 ltr","200 ml","100 ml"]
+  const products = ["sesame", "groundnut", "coconut"];
+  const volumes = ["1 ltr", "1/2 ltr", "200 ml", "100 ml"];
 
-  let sql_query = `select * from sales where user_id=${userId} AND date='${dayjs(date).format('YYYY-MM-DD hh:mm:ss')}' AND isChecked=1`;
+  let sql_query = `select * from sales where user_id=${userId} AND date='${dayjs(
+    date
+  ).format("YYYY-MM-DD hh:mm:ss")}' AND isChecked=1`;
   await db.query(sql_query, async (err, result) => {
-    console.log(result)
+    console.log(result);
     if (err) throw err;
     await db.query(
       `select full_name,email,mobile_no,gst_number,address from users where user_id=${userId}`,
-      async(err, user) => {
+      async (err, user) => {
         if (err) throw err;
-        await db.query('select * from price',async(err,priceList)=>{
-          if(err) throw err;
+        await db.query("select * from price", async (err, priceList) => {
+          if (err) throw err;
 
-        
-        const browser = await puppeteer.launch();
-        const page = await browser.newPage();
-        // await page.setViewport({ width: 1200, height: 800 });
+          const browser = await puppeteer.launch({
+            args: [
+              "--disable-setuid-sandbox",
+              "--no-sandbox",
+              "--single-process",
+              "--no-zygote",
+            ],
+            executablePath:
+              process.env.NODE_ENV === "production"
+                ? process.env.PUPPETEER_EXECUTABLE_PATH
+                : puppeteer.executablePath(),
+          });
+          const page = await browser.newPage();
+          // await page.setViewport({ width: 1200, height: 800 });
 
-        const absolutePath = path.resolve(__dirname, 'public', 'neenika.html');
-        // await page.goto(`file://${absolutePath}`)
-        // const user1=user[0]
-        // await page.evaluate((user1,result,priceList)=>{
-          
+          const absolutePath = path.resolve(
+            __dirname,
+            "public",
+            "neenika.html"
+          );
+          // await page.goto(`file://${absolutePath}`)
+          // const user1=user[0]
+          // await page.evaluate((user1,result,priceList)=>{
 
-        //   document.querySelector('.name-value').textContent=user1.full_name
+          //   document.querySelector('.name-value').textContent=user1.full_name
 
-        // })
-        let total=0;
-        let totalQuantity=0;
-        const logoPath = '/home/john/app/react_app/back-end/logo.png';
-        const logoData = fs.readFileSync(logoPath).toString('base64');
-const logoSrc = `data:image/png;base64,${logoData}`;
-        await page.setContent(`
+          // })
+          let total = 0;
+          let totalQuantity = 0;
+          const logoPath = "/home/john/app/react_app/back-end/logo.png";
+          const logoData = fs.readFileSync(logoPath).toString("base64");
+          const logoSrc = `data:image/png;base64,${logoData}`;
+          await page.setContent(`
         <div class="bd">
       <div class="company">
         <img class="logo" src="${logoSrc}"/>
@@ -192,7 +208,9 @@ const logoSrc = `data:image/png;base64,${logoData}`;
             <div style="display: flex; justify-content: space-between">
               <div class="row">
                 <span class="bold">Date</span>
-                <span class="date-value">${dayjs(result[0]?.date).format('DD-MM-YYYY')}</span>
+                <span class="date-value">${dayjs(result[0]?.date).format(
+                  "DD-MM-YYYY"
+                )}</span>
               </div>
               <div class="row">
                 <span class="bold">Customer Mobile No</span>
@@ -215,20 +233,24 @@ const logoSrc = `data:image/png;base64,${logoData}`;
             </tr>
           </thead>
           <tbody>
-          ${
-            result.map(item=>{
-              const productPrice=priceList.find(it=>it.product_id==item.product_id && it.volume_id==item.volume_id).price
-              total+=productPrice*item.quantity
-              totalQuantity+=item.quantity
-              return`<tr>
-                <td>${products[item.product_id-1]}
-                ${volumes[item.volume_id-1]}</td>
+          ${result
+            .map((item) => {
+              const productPrice = priceList.find(
+                (it) =>
+                  it.product_id == item.product_id &&
+                  it.volume_id == item.volume_id
+              ).price;
+              total += productPrice * item.quantity;
+              totalQuantity += item.quantity;
+              return `<tr>
+                <td>${products[item.product_id - 1]}
+                ${volumes[item.volume_id - 1]}</td>
                 <td>${productPrice}</td>
                 <td>${item.quantity}</td>
                 <td>${item.total_price}</td>
-              </tr>`
-            }).join('')
-          }
+              </tr>`;
+            })
+            .join("")}
              
           
           </tbody>
@@ -251,15 +273,23 @@ const logoSrc = `data:image/png;base64,${logoData}`;
             </div>
             <div class="row">
               <span class="bold">Taxable(Rs)</span>
-              <p class="taxable">${(total-((Math.round(((total/105)*5)/2*100)/100).toFixed(2))*2)}</p>
+              <p class="taxable">${
+                total -
+                (Math.round((((total / 105) * 5) / 2) * 100) / 100).toFixed(2) *
+                  2
+              }</p>
             </div>
             <div class="row">
               <span class="bold">CGST</span>
-              <p>${(Math.round(((total/105)*5)/2*100)/100).toFixed(2)}</p>
+              <p>${(Math.round((((total / 105) * 5) / 2) * 100) / 100).toFixed(
+                2
+              )}</p>
             </div>
             <div class="row">
               <span class="bold">SGST</span>
-              <p>${(Math.round(((total/105)*5)/2*100)/100).toFixed(2)}</p>
+              <p>${(Math.round((((total / 105) * 5) / 2) * 100) / 100).toFixed(
+                2
+              )}</p>
             </div>
           </div>
         </div>
@@ -282,38 +312,40 @@ const logoSrc = `data:image/png;base64,${logoData}`;
         </div>
       </div>
         </div>
-        `)
-        await page.addStyleTag({ path: './style.css' });
-        await page.pdf({ path: "bill.pdf", format: "A4" });
-        await browser.close();
-        const sender = nodemailer.createTransport({
-          service: "gmail",
-          auth: {
-            user: "neenikafoodpower@gmail.com",
-            pass: "trlm dvyk yggg zsio",
-          },
-        });
-        let composeMail = {
-          from: "neenikafoodpower@gmail.com",
-          to: user[0].email,
-          subject: `The bill for purchase on ${dayjs(date).format('DD-MM-YYYY')}`,
-          attachments: [
-            {
-              filename: "bill.pdf",
-              path: "./bill.pdf",
+        `);
+          await page.addStyleTag({ path: "./style.css" });
+          await page.pdf({ path: "bill.pdf", format: "A4" });
+          await browser.close();
+          const sender = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+              user: "neenikafoodpower@gmail.com",
+              pass: "trlm dvyk yggg zsio",
             },
-          ],
-        };
-        await sender.sendMail(composeMail, (err, result) => {
-          if (err) {
-            console.log(err);
-            res.status(500).send();
-          } else {
-            console.log("mail sended");
-            res.status(200).send({ message: "mail sended suc" });
-          }
+          });
+          let composeMail = {
+            from: "neenikafoodpower@gmail.com",
+            to: user[0].email,
+            subject: `The bill for purchase on ${dayjs(date).format(
+              "DD-MM-YYYY"
+            )}`,
+            attachments: [
+              {
+                filename: "bill.pdf",
+                path: "./bill.pdf",
+              },
+            ],
+          };
+          await sender.sendMail(composeMail, (err, result) => {
+            if (err) {
+              console.log(err);
+              res.status(500).send();
+            } else {
+              console.log("mail sended");
+              res.status(200).send({ message: "mail sended suc" });
+            }
+          });
         });
-      })
       }
     );
   });
