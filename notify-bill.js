@@ -166,7 +166,7 @@ const sendBill = async (req, res) => {
           // })
           let total = 0;
           let totalQuantity = 0;
-          const logoPath = "/home/john/app/react_app/back-end/logo.png";
+          const logoPath = path.join(__dirname,"logo.png");
           const logoData = fs.readFileSync(logoPath).toString("base64");
           const logoSrc = `data:image/png;base64,${logoData}`;
           await page.setContent(`
