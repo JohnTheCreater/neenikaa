@@ -6,7 +6,7 @@ const getStack = async (req, res) => {
   await db.query("select * from stack", (err, result) => {
     if (err) throw err;
     res.send(result);
-    console.log("res")
+    console.log("res",result)
   });
 };
 
