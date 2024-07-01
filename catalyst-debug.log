@@ -1,27 +1,304 @@
-[debug] [2024-06-12T17:24:13.529Z] : 
-[debug] [2024-06-12T17:24:13.531Z] : ----------------------------------------------------------------------
-[debug] [2024-06-12T17:24:13.531Z] : Command:      /home/john/.nvm/versions/node/v21.5.0/bin/node /home/john/.nvm/versions/node/v21.5.0/bin/catalyst serve
-[debug] [2024-06-12T17:24:13.531Z] : CLI Version:  1.17.5
-[debug] [2024-06-12T17:24:13.532Z] : Platform:     linux
-[debug] [2024-06-12T17:24:13.532Z] : Node Version: v21.5.0
-[debug] [2024-06-12T17:24:13.532Z] : Time:         Wed Jun 12 2024 22:54:13 GMT+0530 (India Standard Time)
-[debug] [2024-06-12T17:24:13.532Z] : ----------------------------------------------------------------------
-[debug] [2024-06-12T17:24:13.532Z] : 
-[debug] [2024-06-12T17:24:14.022Z] : > authorizing via signed-in user option
-[debug] [2024-06-12T17:24:14.022Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL","ZohoCatalyst.pdfshot.execute"]
-[debug] [2024-06-12T17:24:14.034Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/4984000000007001 
+[debug] [2024-06-20T10:49:27.802Z] : 
+[debug] [2024-06-20T10:49:27.803Z] : ----------------------------------------------------------------------
+[debug] [2024-06-20T10:49:27.804Z] : Command:      /home/john/.nvm/versions/node/v21.5.0/bin/node /home/john/.nvm/versions/node/v21.5.0/bin/catalyst deploy
+[debug] [2024-06-20T10:49:27.804Z] : CLI Version:  1.17.5
+[debug] [2024-06-20T10:49:27.805Z] : Platform:     linux
+[debug] [2024-06-20T10:49:27.805Z] : Node Version: v21.5.0
+[debug] [2024-06-20T10:49:27.805Z] : Time:         Thu Jun 20 2024 16:19:27 GMT+0530 (India Standard Time)
+[debug] [2024-06-20T10:49:27.805Z] : ----------------------------------------------------------------------
+[debug] [2024-06-20T10:49:27.805Z] : 
+[debug] [2024-06-20T10:49:28.270Z] : > authorizing via signed-in user option
+[debug] [2024-06-20T10:49:28.270Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.webapp.ALL","ZohoCatalyst.appsail.Update"]
+[debug] [2024-06-20T10:49:28.281Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/4984000000007001 
 
-[debug] [2024-06-12T17:24:14.761Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 17:24:14 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/","ZD_CSRF_TOKEN=f11d5d82-74b2-484a-bc2f-5690909a3976;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=f11d5d82-74b2-484a-bc2f-5690909a3976;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+[debug] [2024-06-20T10:49:28.656Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 20 Jun 2024 10:49:28 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/","ZD_CSRF_TOKEN=8238b35a-c951-49cc-90d3-bda48458341b;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=8238b35a-c951-49cc-90d3-bda48458341b;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
 
-[debug] [2024-06-12T17:24:14.772Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/4984000000007001/environment 
+[debug] [2024-06-20T10:49:28.660Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/4984000000007001/environment 
 
-[debug] [2024-06-12T17:24:15.016Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Wed, 12 Jun 2024 17:24:14 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/","ZD_CSRF_TOKEN=ff3e4660-88b8-4668-a733-781283e37067;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=ff3e4660-88b8-4668-a733-781283e37067;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+[debug] [2024-06-20T10:49:28.752Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 20 Jun 2024 10:49:28 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/","ZD_CSRF_TOKEN=c38035ab-40af-4b52-b4b2-62912ac59a37;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=c38035ab-40af-4b52-b4b2-62912ac59a37;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
 
-[debug] [2024-06-12T17:24:28.519Z] : http port : '3000' is not available. Hence port '3001' will be used instead.
-[debug] [2024-06-12T17:24:28.521Z] : No basic functions to add
-[info] [2024-06-12T17:24:29.212Z] : 
-[info] [2024-06-12T17:24:29.212Z] :  >>>>>>>>>>>>>> AppSail <<<<<<<<<<<<<< 
-[info] [2024-06-12T17:24:29.213Z] : ℹ neeniAppsail: http://localhost:3001
-[info] [2024-06-12T17:24:29.213Z] : 
+[debug] [2024-06-20T10:50:51.970Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.in/baas/v1/project/4984000000007001/appsail/upsert 
+
+[debug] [2024-06-20T10:50:52.449Z] : <<<< HTTP RESPONSE : 413
+Response Headers: {"server":"ZGS","date":"Thu, 20 Jun 2024 10:50:52 GMT","content-type":"text/html","content-length":"148","connection":"close","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-20T10:50:52.456Z] : Response Body : "<html>\r\n<head><title>413 Request Entity Too Large</title></head>\r\n<body>\r\n<center><h1>413 Request Entity Too Large</h1></center>\r\n</body>\r\n</html>\r\n"
+
+[debug] [2024-06-20T10:50:52.479Z] : CatalystError: HTTP Error: 413, Unknown Error
+    at exports.default (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/errorResponse.js:25:12)
+    at API._parseResponse (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:145:60)
+    at API.<anonymous> (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:226:38)
+    at Generator.next (<anonymous>)
+    at /home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:31:71
+    at new Promise (<anonymous>)
+    at __awaiter (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:27:12)
+    at Request.<anonymous> (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:224:53)
+    at Request.emit (node:events:531:35)
+    at Request.<anonymous> (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/node_modules/request/request.js:1154:10) {
+  status: 413,
+  exit: 1,
+  original: undefined,
+  context: {
+    body: '<html>\r\n' +
+      '<head><title>413 Request Entity Too Large</title></head>\r\n' +
+      '<body>\r\n' +
+      '<center><h1>413 Request Entity Too Large</h1></center>\r\n' +
+      '</body>\r\n' +
+      '</html>\r\n',
+    response: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 413,
+      statusMessage: 'Request Entity Too Large',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 4,
+      request: [Request],
+      toJSON: [Function: responseToJSON],
+      caseless: [Caseless],
+      body: '<html>\r\n' +
+        '<head><title>413 Request Entity Too Large</title></head>\r\n' +
+        '<body>\r\n' +
+        '<center><h1>413 Request Entity Too Large</h1></center>\r\n' +
+        '</body>\r\n' +
+        '</html>\r\n',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 12,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    }
+  },
+  errorId: undefined,
+  arg: undefined,
+  skipHelp: false,
+  fileName: '/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/errorResponse'
+}
+[warn] [2024-06-20T10:50:52.481Z] : ⚠ Deploy of AppSail [neeniAppsail] was unsuccessful since HTTP Error: 413, Unknown Error
+[info] [2024-06-20T10:50:52.482Z] : 
+[error] [2024-06-20T10:50:52.483Z] : ✖ appsail: deploy skipped
+[info] [2024-06-20T10:50:52.483Z] : 
+[error] [2024-06-20T10:50:52.483Z] : ✖ No components deployed!
+[error] [2024-06-20T10:50:52.491Z] : ✖ HTTP Error: 413, Unknown Error
+[debug] [2024-06-20T10:50:52.491Z] : Error Stack: CatalystError: HTTP Error: 413, Unknown Error
+    at exports.default (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/errorResponse.js:25:12)
+    at API._parseResponse (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:145:60)
+    at API.<anonymous> (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:226:38)
+    at Generator.next (<anonymous>)
+    at /home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:31:71
+    at new Promise (<anonymous>)
+    at __awaiter (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:27:12)
+    at Request.<anonymous> (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:224:53)
+    at Request.emit (node:events:531:35)
+    at Request.<anonymous> (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/node_modules/request/request.js:1154:10)
+[debug] [2024-06-20T10:50:52.492Z] : Error Context: {
+  "body": "<html>\r\n<head><title>413 Request Entity Too Large</title></head>\r\n<body>\r\n<center><h1>413 Request Entity Too Large</h1></center>\r\n</body>\r\n</html>\r\n",
+  "response": {
+    "statusCode": 413,
+    "body": "<html>\r\n<head><title>413 Request Entity Too Large</title></head>\r\n<body>\r\n<center><h1>413 Request Entity Too Large</h1></center>\r\n</body>\r\n</html>\r\n",
+    "headers": {
+      "server": "ZGS",
+      "date": "Thu, 20 Jun 2024 10:50:52 GMT",
+      "content-type": "text/html",
+      "content-length": "148",
+      "connection": "close",
+      "strict-transport-security": "max-age=63072000"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "api.catalyst.zoho.in",
+        "port": 443,
+        "hostname": "api.catalyst.zoho.in",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/baas/v1/project/4984000000007001/appsail/upsert",
+        "path": "/baas/v1/project/4984000000007001/appsail/upsert",
+        "href": "https://api.catalyst.zoho.in/baas/v1/project/4984000000007001/appsail/upsert"
+      },
+      "method": "PUT"
+    }
+  }
+}
+[debug] [2024-06-20T10:50:52.492Z] : Error Status: 413
+[debug] [2024-06-20T10:50:52.493Z] : EXEC ENDED with event: deploy, message: success
+[debug] [2024-06-20T10:50:52.493Z] : TOTAL DURATION OF COMMAND EXEC : 84224
+[debug] [2024-06-20T10:50:52.504Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.in/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-06-20T10:50:53.560Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 20 Jun 2024 10:50:53 GMT","content-length":"0","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/","ZD_CSRF_TOKEN=2e7ac6b7-cdf2-4bd8-b0c5-dfedca5ede2c;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=2e7ac6b7-cdf2-4bd8-b0c5-dfedca5ede2c;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-20T10:56:02.083Z] : 
+[debug] [2024-06-20T10:56:02.085Z] : ----------------------------------------------------------------------
+[debug] [2024-06-20T10:56:02.085Z] : Command:      /home/john/.nvm/versions/node/v21.5.0/bin/node /home/john/.nvm/versions/node/v21.5.0/bin/catalyst deploy
+[debug] [2024-06-20T10:56:02.085Z] : CLI Version:  1.17.5
+[debug] [2024-06-20T10:56:02.086Z] : Platform:     linux
+[debug] [2024-06-20T10:56:02.086Z] : Node Version: v21.5.0
+[debug] [2024-06-20T10:56:02.086Z] : Time:         Thu Jun 20 2024 16:26:02 GMT+0530 (India Standard Time)
+[debug] [2024-06-20T10:56:02.086Z] : ----------------------------------------------------------------------
+[debug] [2024-06-20T10:56:02.086Z] : 
+[debug] [2024-06-20T10:56:02.571Z] : > authorizing via signed-in user option
+[debug] [2024-06-20T10:56:02.571Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.webapp.ALL","ZohoCatalyst.appsail.Update"]
+[debug] [2024-06-20T10:56:02.582Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/4984000000007001 
+
+[debug] [2024-06-20T10:56:02.984Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 20 Jun 2024 10:56:02 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/","ZD_CSRF_TOKEN=e807c405-c2c6-4bf8-9689-d7db29f9a05a;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=e807c405-c2c6-4bf8-9689-d7db29f9a05a;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-20T10:56:03.002Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/4984000000007001/environment 
+
+[debug] [2024-06-20T10:56:03.075Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 20 Jun 2024 10:56:03 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/","ZD_CSRF_TOKEN=b1ce5998-343f-4148-9ccc-78b8866592ea;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=b1ce5998-343f-4148-9ccc-78b8866592ea;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-20T10:58:12.879Z] : >>>> HTTP REQUEST : PUT https://api.catalyst.zoho.in/baas/v1/project/4984000000007001/appsail/upsert 
+
+[debug] [2024-06-20T10:58:13.348Z] : <<<< HTTP RESPONSE : 413
+Response Headers: {"server":"ZGS","date":"Thu, 20 Jun 2024 10:58:13 GMT","content-type":"text/html","content-length":"148","connection":"close","strict-transport-security":"max-age=63072000"}
+
+[debug] [2024-06-20T10:58:13.359Z] : Response Body : "<html>\r\n<head><title>413 Request Entity Too Large</title></head>\r\n<body>\r\n<center><h1>413 Request Entity Too Large</h1></center>\r\n</body>\r\n</html>\r\n"
+
+[debug] [2024-06-20T10:58:13.383Z] : CatalystError: HTTP Error: 413, Unknown Error
+    at exports.default (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/errorResponse.js:25:12)
+    at API._parseResponse (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:145:60)
+    at API.<anonymous> (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:226:38)
+    at Generator.next (<anonymous>)
+    at /home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:31:71
+    at new Promise (<anonymous>)
+    at __awaiter (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:27:12)
+    at Request.<anonymous> (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:224:53)
+    at Request.emit (node:events:531:35)
+    at Request.<anonymous> (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/node_modules/request/request.js:1154:10) {
+  status: 413,
+  exit: 1,
+  original: undefined,
+  context: {
+    body: '<html>\r\n' +
+      '<head><title>413 Request Entity Too Large</title></head>\r\n' +
+      '<body>\r\n' +
+      '<center><h1>413 Request Entity Too Large</h1></center>\r\n' +
+      '</body>\r\n' +
+      '</html>\r\n',
+    response: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: [TLSSocket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 413,
+      statusMessage: 'Request Entity Too Large',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      _eventsCount: 4,
+      request: [Request],
+      toJSON: [Function: responseToJSON],
+      caseless: [Caseless],
+      body: '<html>\r\n' +
+        '<head><title>413 Request Entity Too Large</title></head>\r\n' +
+        '<body>\r\n' +
+        '<center><h1>413 Request Entity Too Large</h1></center>\r\n' +
+        '</body>\r\n' +
+        '</html>\r\n',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 12,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    }
+  },
+  errorId: undefined,
+  arg: undefined,
+  skipHelp: false,
+  fileName: '/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/errorResponse'
+}
+[warn] [2024-06-20T10:58:13.385Z] : ⚠ Deploy of AppSail [neeniAppsail] was unsuccessful since HTTP Error: 413, Unknown Error
+[info] [2024-06-20T10:58:13.386Z] : 
+[error] [2024-06-20T10:58:13.387Z] : ✖ appsail: deploy skipped
+[info] [2024-06-20T10:58:13.387Z] : 
+[error] [2024-06-20T10:58:13.388Z] : ✖ No components deployed!
+[error] [2024-06-20T10:58:13.392Z] : ✖ HTTP Error: 413, Unknown Error
+[debug] [2024-06-20T10:58:13.392Z] : Error Stack: CatalystError: HTTP Error: 413, Unknown Error
+    at exports.default (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/errorResponse.js:25:12)
+    at API._parseResponse (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:145:60)
+    at API.<anonymous> (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:226:38)
+    at Generator.next (<anonymous>)
+    at /home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:31:71
+    at new Promise (<anonymous>)
+    at __awaiter (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:27:12)
+    at Request.<anonymous> (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/lib/internal/api.js:224:53)
+    at Request.emit (node:events:531:35)
+    at Request.<anonymous> (/home/john/.nvm/versions/node/v21.5.0/lib/node_modules/zcatalyst-cli/node_modules/request/request.js:1154:10)
+[debug] [2024-06-20T10:58:13.392Z] : Error Context: {
+  "body": "<html>\r\n<head><title>413 Request Entity Too Large</title></head>\r\n<body>\r\n<center><h1>413 Request Entity Too Large</h1></center>\r\n</body>\r\n</html>\r\n",
+  "response": {
+    "statusCode": 413,
+    "body": "<html>\r\n<head><title>413 Request Entity Too Large</title></head>\r\n<body>\r\n<center><h1>413 Request Entity Too Large</h1></center>\r\n</body>\r\n</html>\r\n",
+    "headers": {
+      "server": "ZGS",
+      "date": "Thu, 20 Jun 2024 10:58:13 GMT",
+      "content-type": "text/html",
+      "content-length": "148",
+      "connection": "close",
+      "strict-transport-security": "max-age=63072000"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "api.catalyst.zoho.in",
+        "port": 443,
+        "hostname": "api.catalyst.zoho.in",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/baas/v1/project/4984000000007001/appsail/upsert",
+        "path": "/baas/v1/project/4984000000007001/appsail/upsert",
+        "href": "https://api.catalyst.zoho.in/baas/v1/project/4984000000007001/appsail/upsert"
+      },
+      "method": "PUT"
+    }
+  }
+}
+[debug] [2024-06-20T10:58:13.393Z] : Error Status: 413
+[debug] [2024-06-20T10:58:13.393Z] : EXEC ENDED with event: deploy, message: success
+[debug] [2024-06-20T10:58:13.393Z] : TOTAL DURATION OF COMMAND EXEC : 130828
+[debug] [2024-06-20T10:58:16.346Z] : >>>> HTTP REQUEST : POST https://api.catalyst.zoho.in/baas/v1/cli/logs 
+<request body omitted>
+
+[debug] [2024-06-20T10:58:17.053Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 20 Jun 2024 10:58:16 GMT","content-length":"0","connection":"keep-alive","set-cookie":["zalb_3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/","ZD_CSRF_TOKEN=7bc2c07b-6ae5-464a-8eea-76e911147d12;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=7bc2c07b-6ae5-464a-8eea-76e911147d12;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","pragma":"no-cache","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+

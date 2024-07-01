@@ -5,8 +5,6 @@ const stack=require('./stack')
 const notify=require('./notify-bill')
 const route=express.Router();
 const login=require('./login')
-const ex_pr=require('./products')
-
 
 route.post('/addCustomer',add_user.add_user)
 route.post('/getCustomer',add_user.get_users)
@@ -29,7 +27,5 @@ route.get('/getLog/:startDate/:endDate',stack.getLog)
 route.post('/undo',stack.undo)
 route.post('/setPassword',login.setUsernamePassword)
 route.post('/doLogin',login.doLogin)
-route.post('/addProducts',ex_pr.addProducts)
-
 
 module.exports=route;

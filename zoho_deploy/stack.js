@@ -27,32 +27,11 @@ const setStackUpdate = async (req, res) => {
   const { oilAndCake,bottleAndCaps, shop } = req.body;
   console.log(oilAndCake, shop);
 
-  if (oilAndCake.length!=0) {
+  if (oilAndCake) {
     try {
       for (const product of oilAndCake) {
         const { quantity, oil_name, selectedType } = product;
-        console.log(quantity, oil_name, selectedType,shop );
-        const sql_query = `
-                    UPDATE stack_${parseInt(shop)===1?'madurai':'karisal'} 
-                    SET oil_quantity = oil_quantity + ? 
-                    WHERE oil_type = ? 
-                    AND type= ?
-                `;
-        await db.query(sql_query, [quantity, oil_name + 1, selectedType + 1 ]);
-      }
-      console.log("updated sm", shop);
-      // res.send("Update successful");
-    } catch (error) {
-      console.error(`Error updating stack_${shop==1?'madurai':'karisal'}:`, error);
-      res.status(500).send("Internal Server Error");
-    }
-  } 
-  if(bottleAndCaps)
-  {
-    try {
-      for (const product of bottleAndCaps) {
-        const { quantity, oil_name, volume_type, product_type } = product;
-        console.log(quantity, oil_name,volume_type, product_type ,shop ,"bottle updated");
+        console.log(quantity, oil_name, selectedType );
         const sql_query = `
                     UPDATE stack 
                     SET stack = stack + ? 
@@ -61,19 +40,17 @@ const setStackUpdate = async (req, res) => {
                     AND stack_type= ?
                     AND shop = ?
                 `;
-        await db.query(sql_query, [quantity, oil_name + 1,volume_type+1,product_type+1,shop]);
+        await db.query(sql_query, [quantity, oil_name + 1, selectedType + 1]);
       }
       console.log("updated", shop);
-      // res.send("Update successful");
+      res.send("Update successful");
     } catch (error) {
-      console.error("Error updating ", error);
+      console.error("Error updating stack madurai:", error);
       res.status(500).send("Internal Server Error");
     }
-
+  } else {
+    res.status(400).send("No data provided for update");
   }
-  await res.status(200).send();
-  
-
 };
 
 const getProductionStack = async (req, res) => {
