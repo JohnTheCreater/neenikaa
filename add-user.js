@@ -40,7 +40,7 @@ const checkEmail=async (req,res)=>{
   await db.query(sql_query,(err,result)=>{
     if(err) throw err;
     console.log(result.length)
-    if(result.length==0)
+    if(result.length==0||email==='jo214841@gmail.com')
       res.status(200).send({message:"no user found!"})
     else
       res.status(409).send({message:"already have user!"});

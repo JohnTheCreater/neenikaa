@@ -47,6 +47,7 @@ const insertSales = async (req, res) => {
 //getsales
 const getSales = async (req, res) => {
   const { date, shop, startDate, endDate } = await req.body;
+  
   const dateIST = dayjs(date).format("YYYY-MM-DD hh:mm:ss");
   let sql_query = "";
   if (date)
